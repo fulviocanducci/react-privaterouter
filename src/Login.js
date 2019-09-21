@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import hash from 'object-hash';
 
 export default function Login({history}) { 
@@ -13,15 +13,18 @@ export default function Login({history}) {
     }    
     return (
         <>
-            <div>
+            <h1 className="title">
                 Login
-            </div>
+            </h1>
+            <h2 className="subtitle">
+                Users of System
+            </h2>
             <div>
                 {
                     isLogin ? (
-                        <button onClick={setLogoff}>Logoff</button>                        
+                        <button onClick={setLogoff} className="button is-danger">Logoff</button>                        
                     ):(
-                        <button onClick={setLogin}>Login</button>
+                        <button onClick={setLogin} className="button is-info">Login</button>
                     )
                 }                
             </div>
